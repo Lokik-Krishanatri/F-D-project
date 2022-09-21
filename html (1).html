@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Weight Converter</title>
+  <style>
+    span {
+      color: rgb(39, 237, 39);
+    }
+    body{
+  background-image: url('https://cdn.mos.cms.futurecdn.net/v5n22xGyNNHLzSnSArbrVH.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: black;
+  color: rgb(230, 223, 14);
+}
+
+#first{
+  height: 200px;
+  width: 250px;
+}
+
+#div1{
+  display: block;
+}
+
+#div2{
+  display: block;
+}
+
+.planet{
+  margin: 0.5em;
+  padding: 0.3em;
+}
+  </style>
+
+<link rel="stylesheet" type="text/css" href="css(1).css">
+</head>
+
+
+<body>
+
+
+<h1 style="color: rgb(24, 245, 24); text-align: center;"></h1>
+ 
+        <div style="color: rgb(142, 237, 226); text-align: center;"><label><h2>Enter Value In Kilograms</h2></label>
+            <input id="Kilograms"
+                   type="number"
+                   placeholder="Weight on earth"
+                   oninput="kiloweightConvert(this.value)"
+                   onchange="kiloweightConvert(this.value)" />
+                  </div>      
+
+        
+<div id = "div1">
+<div id = "div3" class="planet"><p>mercury: <span id="mercury"></span></p> </div>
+<div id = "div4" class="planet"> <p>venus: <span id="venus"></span></p></div>
+<div id = "div5" class="planet"><p>earth: <span id="earth"></span></p></div>        
+<div id = "div6" class="planet"><p>mars: <span id="mars"></span></p></div>
+</div><div id="div2">
+<div id = "div7" class="planet"><p>jupiter: <span id="jupiter"></span></p></div>
+<div id = "div8" class="planet"><p>satrun: <span id="satrun"></span></p></div>
+<div id = "div9" class="planet"><p>uranus: <span id="uranus"></span></p></div>
+<div id = "div10" class="planet"><p>neptune: <span id="neptune"></span></p></div>
+</div>
+
+
+ 
+ 
+        <script>
+            function kiloweightConvert(value) {
+              var mas=Number(value/9.807);
+
+                document.getElementById("mercury").innerHTML =
+                  mas * 3.7 ;
+                document.getElementById("venus").innerHTML =
+                  mas * 8.87;
+                document.getElementById("earth").innerHTML =
+                  mas * 9.807;
+                document.getElementById("mars").innerHTML =
+                  mas * 3.721;
+                document.getElementById("jupiter").innerHTML =
+                 mas * 24.79;
+                document.getElementById("satrun").innerHTML =
+                 mas * 10.44;
+                document.getElementById("uranus").innerHTML =
+                 mas * 8.87;
+                document.getElementById("neptune").innerHTML =
+                 mas * 11.15;
+                    
+            }
+        </script>
+    </body>
+</html>
